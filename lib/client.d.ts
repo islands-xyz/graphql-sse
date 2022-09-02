@@ -1,9 +1,3 @@
-/**
- *
- * client
- *
- */
-import 'react-native-polyfill-globals/auto';
 import { RequestParams, Sink, StreamMessage, ExecutionResult, StreamEvent } from './common';
 /** This file is the entry point for browsers, re-export common elements. */
 export * from './common';

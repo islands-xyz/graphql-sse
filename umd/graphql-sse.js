@@ -55,19 +55,6 @@
         function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
     }
 
-    var polyfill = () => {
-        [
-            require('./src/base64'),
-            require('./src/encoding'),
-            require('./src/readable-stream'),
-            require('./src/url'),
-            require('./src/fetch'),
-            require('./src/crypto'),
-        ].forEach(({ polyfill }) => polyfill());
-    };
-
-    polyfill();
-
     /**
      *
      * common

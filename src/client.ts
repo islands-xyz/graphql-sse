@@ -3,7 +3,6 @@
  * client
  *
  */
-import 'react-native-polyfill-globals/auto'
 import { createParser } from './parser';
 import { isObject } from './utils';
 import {
