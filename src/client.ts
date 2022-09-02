@@ -3,7 +3,7 @@
  * client
  *
  */
-
+import 'react-native-polyfill-globals/auto'
 import { createParser } from './parser';
 import { isObject } from './utils';
 import {
@@ -731,9 +731,12 @@ async function connect<SingleConnection extends boolean>(
 
   let res;
   try {
+
     res = await fetchFn(url, {
       signal,
       method: body ? 'POST' : 'GET',
+      // @ts-ignore
+      reactNative: { textStreaming: true },
       credentials,
       referrer,
       referrerPolicy,
